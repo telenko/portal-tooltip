@@ -1,0 +1,37 @@
+{
+  "name": "@telenko/portal-tooltip",
+  "version": "0.0.1",
+  "description": "Easy component, which allows to bind React contents as tooltip to a native DOM element",
+  "main": "src/PortalTooltip.jsx",
+  "scripts": {
+    "test": "echo 'no tests yet :('",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telenko/portal-tooltip.git"
+  },
+  "keywords": [
+    "react",
+    "portal-tooltip"
+  ],
+  "author": "Andrii Telenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/telenko/portal-tooltip/issues"
+  },
+  "homepage": "https://github.com/telenko/portal-tooltip#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/react": "^6.1.21",
+    "babel-loader": "^8.2.2"
+  }
+}
