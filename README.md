@@ -16,7 +16,7 @@
   const Example: React.FC = () => {
       const container = useMemo(() => document.getElementById('hover-container'), []);
 
-      return <PortalTooltip>
+      return <PortalTooltip container={container}>
         <div>I'm a contents inside a tooltip :) You can use any React components here.</div>
       </PortalTooltip>
   };

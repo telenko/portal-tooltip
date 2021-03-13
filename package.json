@@ -1,6 +1,6 @@
 {
   "name": "@telenko/portal-tooltip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy component, which allows to bind React contents as tooltip to a native DOM element",
   "main": "src/PortalTooltip.jsx",
   "scripts": {

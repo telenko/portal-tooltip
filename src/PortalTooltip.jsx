@@ -7,7 +7,7 @@ import { createPortal } from "react-dom";
  */
 //TODO @andrii implement direction
 const PortalTooltip = ({ children, container, dx=0, dy=0, direction='left' }) => {
-    const [holderEl] = useState<HTMLElement>(() => document.createElement('div'));
+    const [holderEl] = useState(() => document.createElement('div'));
     const hide = useCallback(() => {
         holderEl.style.display = 'none';
     }, []);
