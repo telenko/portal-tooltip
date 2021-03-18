@@ -21,3 +21,19 @@
       </PortalTooltip>
   };
 ```
+
+# Positioning
+```Javascript
+  //left to cursor
+  <PortalTooltip container={container} direction='left'>...</PortalTooltip>
+  //right to cursor
+  <PortalTooltip container={container} direction='right'>...</PortalTooltip>
+  //top to cursor
+  <PortalTooltip container={container} direction='top'>...</PortalTooltip>
+  //bottom to cursor
+  <PortalTooltip container={container} direction='bottom'>...</PortalTooltip>
+  //manual position
+  <PortalTooltip container={container} dx={20} dy={-200}>...</PortalTooltip>
+  //mixed position
+  <PortalTooltip container={container} direction='right' dx={20}>...</PortalTooltip>
+```

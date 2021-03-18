@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
  *     <div>I'm a tooltip header!</div>
  * </PortalTooltip>
  */
+const BASE_OFFSET = 10;
 const PortalTooltip = ({ children, container, dx=0, dy=0, direction='right' }) => {
     const [holderEl] = useState(() => document.createElement('div'));
     const hide = useCallback(() => {
@@ -19,11 +20,11 @@ const PortalTooltip = ({ children, container, dx=0, dy=0, direction='right' }) =
     const positionDx = useCallback(() => {
         switch (direction) {
             case 'right': {
-                return 0;
+                return BASE_OFFSET;
             }
             case 'left': {
                 const { width } = holderRects();
-                return -width;
+                return -width - BASE_OFFSET;
             }
             case 'top': {
                 const { width } = holderRects();
@@ -46,7 +47,7 @@ const PortalTooltip = ({ children, container, dx=0, dy=0, direction='right' }) =
             }
             case 'top': {
                 const { height } = holderRects();
-                return -height;
+                return -height - BASE_OFFSET;
             }
             case 'bottom': {
                 const { height } = holderRects();
@@ -70,6 +71,7 @@ const PortalTooltip = ({ children, container, dx=0, dy=0, direction='right' }) =
         holderEl.style.zIndex = '999';
         holderEl.style.position = 'absolute';
         document.body.appendChild(holderEl);
+        hide();
         return () => {
             holderEl.remove();
         };
