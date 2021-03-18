@@ -3,7 +3,7 @@ import type { FC } from 'react';
 export type PortalTooltipProps = {
     children: any,
     container: HTMLElement,
-    direction?: "left" | " right",
+    direction?: "left" | "right" | "top" | "bottom",
     dx?: number,
     dy?: number
 };
